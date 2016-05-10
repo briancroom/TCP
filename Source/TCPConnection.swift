@@ -39,7 +39,9 @@ public final class TCPConnection: Connection {
     }
 
     public init(host: String, port: Int) throws {
+        print("** Creating IP with \(host):\(port)")
         self.ip = try IP(remoteAddress: host, port: port)
+        print("** Done creating IP")
     }
 
     public func open(timingOut deadline: Double) throws {
